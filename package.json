@@ -1,0 +1,26 @@
+{
+  "name": "ii1302-iot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "fetch": "^1.1.0",
+    "net": "^1.0.2",
+    "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArthurWSimonsson/ii1302-iot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ArthurWSimonsson/ii1302-iot/issues"
+  },
+  "homepage": "https://github.com/ArthurWSimonsson/ii1302-iot#readme"
+}
