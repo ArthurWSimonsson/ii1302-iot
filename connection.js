@@ -6,8 +6,10 @@ exports.onClientConnected = function(sock) {
    
     // sock.on('connect', async function(data) {
     //     console.log('%s Says: %s', remoteAddress, data);
-    //     model.getWelcome().then(data => sock.write(data.message));
-    // }); 
+    //     return await model.getWelcome().then(data => sock.write(data.message));
+    // });
+    // var message = await 
+    model.getWelcome().then(data => sock.write(data.message));
     
     sock.on('data', async function(data) {
         console.log('%s Says: %s', remoteAddress, data);
