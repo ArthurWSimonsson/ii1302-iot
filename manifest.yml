@@ -3,4 +3,4 @@ applications:
   memory: 64M
   buildpack: sdk-for-nodejs
   routes:
-    - route: tcp.eu-gb.mybluemix.net:2408
+    - route: tcp-eu-gb.mybluemix.net:2408
