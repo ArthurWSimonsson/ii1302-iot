@@ -1,6 +1,6 @@
 applications:
 - name: ii1302-tcp
-  memory: 128M
+  memory: 64M
   buildpack: sdk-for-nodejs
   routes:
     - route: ii1302-tcp.eu-gb.mybluemix.net:2408
