@@ -3,13 +3,13 @@ var model = require('./model/messageModel')
 exports.onClientConnected = function(sock) {  
     var remoteAddress = sock.remoteAddress + ':' + sock.remotePort;
     console.log('new client connected: %s', remoteAddress);
-   
+
     // sock.on('connect', async function(data) {
     //     console.log('%s Says: %s', remoteAddress, data);
     // });
 
     sock.write('connection initiated\n');
-    
+
     sock.on('data', async function(data) {
         console.log('%s Says: %s', remoteAddress, data);
         var value = data.toString().replace(/(\r\n|\n|\r)/gm,"");

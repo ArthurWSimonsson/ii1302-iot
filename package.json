@@ -4,6 +4,7 @@
   "description": "",
   "main": "app.js",
   "dependencies": {
+    "cfenv": "^1.2.2",
     "fetch": "^1.1.0",
     "net": "^1.0.2",
     "node-fetch": "^2.6.0"
