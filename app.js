@@ -17,6 +17,6 @@ var server = net.createServer(con.onClientConnected);
 //   console.log('server listening on %j', server.address());
 // });
 
-server.listen(appEnv.port, appEnv.url, function() {  
+server.listen(appEnv.port || 8080, appEnv.url, function() {  
   console.log('server listening on %j', server.address());
 });
