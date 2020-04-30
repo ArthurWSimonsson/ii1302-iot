@@ -8,8 +8,8 @@ var net = require('net');
 // const HOST = 'localhost';
 // const HOST = '35.230.145.234'; // external
 // const HOST = '192.168.10.231';
-const HOST = '10.154.0.2'; //internal
-// const HOST = '0.0.0.0';
+// const HOST = '10.154.0.2'; //internal
+const HOST = '0.0.0.0';
 const PORT = 8080;
 
 // port forward : 213.114.145.242 portnummer 3001
