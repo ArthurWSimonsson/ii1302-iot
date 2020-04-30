@@ -16,7 +16,7 @@ const PORT = 63000;
 
 var server = net.createServer(con.onClientConnected);  
  
-server.listen(PORT, HOST, function() {  
+server.listen(HOST, function() {  
   console.log('server listening on %j', server.address());
 });
 
