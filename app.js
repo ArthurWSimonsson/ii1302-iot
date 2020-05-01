@@ -9,6 +9,7 @@
 // // const HOST = '35.230.145.234'; // external
 // // const HOST = '192.168.10.231';
 // // const HOST = '10.154.0.2'; //internal
+const HOST = '10.154.0.3' // internal frontend
 // const HOST = '0.0.0.0';
 // const PORT = 8000;
 
@@ -57,6 +58,6 @@ var server = http.createServer(function(request, response) {
 });
 
 var port = 8080;
-server.listen(port);
+server.listen(port, HOST);
 
 console.log("Server running at http://localhost:%d", port);
