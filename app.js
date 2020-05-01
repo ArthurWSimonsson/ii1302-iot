@@ -1,24 +1,24 @@
-// var con = require('./connection')
-// var net = require('net');
-// // var cfenv = require('cfenv');
+var con = require('./connection')
+var net = require('net');
+// var cfenv = require('cfenv');
 
-// // var appEnv = cfenv.getAppEnv();
+// var appEnv = cfenv.getAppEnv();
 
 
-// // const HOST = 'localhost';
+// const HOST = 'localhost';
 // // const HOST = '35.230.145.234'; // external
 // // const HOST = '192.168.10.231';
 // const HOST = '10.166.0.2'; //internal
 const HOST = '0.0.0.0';
-// const PORT = 8000;
+const PORT = 8080;
 
-// // port forward : 213.114.145.242 portnummer 3001
+// port forward : 213.114.145.242 portnummer 3001
 
-// var server = net.createServer(con.onClientConnected);  
+var server = net.createServer(con.onClientConnected);  
  
-// server.listen(HOST, PORT, function() {  
-//   console.log('server listening on %j', server.address());
-// });
+server.listen(PORT, HOST, function() {  
+  console.log('server listening on %j', server.address());
+});
 
 // // server.listen(appEnv.port || 8080, '0.0.0.0', function() {  
 // //   console.log('server listening on %j', server.address());
@@ -47,16 +47,16 @@ const HOST = '0.0.0.0';
 //    console.log('Example app listening on port 3000!');
 // });
 
-var http = require('http');
+// var http = require('http');
 
-var server = http.createServer(function(request, response) {
+// var server = http.createServer(function(request, response) {
 
-    response.writeHead(200, {"Content-Type": "text/plain"});
-    response.end("Hello World!");
+//     response.writeHead(200, {"Content-Type": "text/plain"});
+//     response.end("Hello World!");
 
-});
+// });
 
-var port = 8080;
-server.listen(port, HOST);
+// var port = 8080;
+// server.listen(port, HOST);
 
-console.log("Server running at http://localhost:%d", port);
+// console.log("Server running at http://localhost:%d", port);
