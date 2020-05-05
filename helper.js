@@ -1,12 +1,20 @@
-
+Date.prototype.addHours= function(h){
+    var copiedDate = new Date();
+    copiedDate.setTime(this.getTime() + (h*60*60*1000)); 
+    return copiedDate;
+}
 
 
 exports.getDateTime = function () {
-    Date.prototype.addHours = function(h) {
-        this.setTime(this.getTime() + (h*60*60*1000));
-        return this;
-    }
+    // Date.prototype.addHours = function(h) {
+    //     this.setTime(this.getTime() + (h*60*60*1000));
+    //     return this;
+    // }
+
+
+
     var today = new Date();
+    // today.setHours(today.getHours() + 2);
     var localTime = today.addHours(2) 
 
     return localTime.toISOString().replace('T', ' ').substr(0, 19);
