@@ -10,6 +10,7 @@ exports.getWelcome = function() {
         return response.json();
     })
     .then((data) => {
-        return data
+        return data;
     });
 }
+
