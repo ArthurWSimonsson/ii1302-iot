@@ -22,8 +22,8 @@ exports.getDateTime = function () {
     // var localTime = today.addHours(2) 
 
     // return today;
-    // return today.toISOString().replace('T', ' ').substr(0, 19);
-    return today.toString()//.replace('T', ' ').substr(0, 19);
+    return today.toISOString().replace('T', ' ').substr(0, 19);
+    // return today.toString()//.replace('T', ' ').substr(0, 19);
     // var date2 = new Date().toISOString().getTimezoneOffset()*60*1000).substr(0, 19).replace('T', ' ');
     // var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
     // var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
