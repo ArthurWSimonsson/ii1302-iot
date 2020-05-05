@@ -6,10 +6,8 @@ exports.getDateTime = function () {
     // var dateTime = date+' '+time;
 
     // var tzoffset = (new Date()).getTimezoneOffset() * 60000; //offset in milliseconds
-    var localTime = (new Date(Date.now())).toISOString().replace('T', ' ').substr(0, 19);
+    var tzoffset = -7200000 //hardcoded as vm is not deployed in same timezone as user.
+    var localTime = (new Date(Date.now() - tzoffset)).toISOString().replace('T', ' ').substr(0, 19);
 
-    // console.log('helper', (new Date()).getTimezoneOffset())
-    // console.log('helper', (Date().now()))
-    // console.log('helper2', dateTime)
     return localTime;
 }
