@@ -5,8 +5,8 @@ exports.getDateTime = function () {
     // var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
     // var dateTime = date+' '+time;
 
-    var tzoffset = (new Date()).getTimezoneOffset() * 60000; //offset in milliseconds
-    var localTime = (new Date(Date.now() - tzoffset)).toISOString().replace('T', ' ').substr(0, 19);
+    // var tzoffset = (new Date()).getTimezoneOffset() * 60000; //offset in milliseconds
+    var localTime = (new Date(Date.now())).toISOString().replace('T', ' ').substr(0, 19);
 
     // console.log('helper', (new Date()).getTimezoneOffset())
     // console.log('helper', (Date().now()))
