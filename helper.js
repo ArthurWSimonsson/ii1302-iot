@@ -14,10 +14,12 @@ exports.getDateTime = function () {
 
 
     var today = new Date();
+    // var localTime = 
+    today.setTime(today.getTime() + (2*60*60*1000));
     // today.setHours(today.getHours() + 2);
-    var localTime = today.addHours(2) 
+    // var localTime = today.addHours(2) 
 
-    return localTime.toISOString().replace('T', ' ').substr(0, 19);
+    return today.toISOString().replace('T', ' ').substr(0, 19);
     // var date2 = new Date().toISOString().getTimezoneOffset()*60*1000).substr(0, 19).replace('T', ' ');
     // var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
     // var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
