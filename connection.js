@@ -11,11 +11,11 @@ exports.onClientConnected = function(sock) {
         console.log('%s Says: %s', remoteAddress, data);
         var value = data.toString().replace(/(\r\n|\n|\r)/gm,"");
         if (value.localeCompare('welcome') === 0) {
-          model.getWelcome().then(data => sock.write(data.message));
+          model.getWelcome().then(data => sock.write(`${data.message}~`));
         }
-        else if (value.localeCompare('time') === 0) {
-          sock.write(common.getDateTime())
-        }
+        // else if (value.localeCompare('time') === 0) {
+        //   sock.write(common.getDateTime())
+        // }
     });
 
     sock.on('close',  function () {
