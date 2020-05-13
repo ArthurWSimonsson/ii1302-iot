@@ -1,6 +1,12 @@
 var model = require('./model/messageModel')
 var common = require('./helper')
 
+/* Author Arthur Simonsson */
+
+/* Connection protocoll on socket creation */
+/* If data is received with a correct string value (here 'message') then the result of the database
+   fetch is written back. Otherwise it waits for a close signal to be made.*/
+
 exports.onClientConnected = function(sock) {  
     var remoteAddress = sock.remoteAddress + ':' + sock.remotePort;
     console.log('new client connected: %s', remoteAddress);
